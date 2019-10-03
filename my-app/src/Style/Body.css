@@ -1,0 +1,38 @@
+.body {
+    margin-top: 50px;
+  }
+.slide div img {
+    width: 100%;
+    height: 30%;
+}
+@media screen and (max-width: 1080px) {
+    #myCarousel {
+      margin-top: 0px;
+    }
+}
+.ProductList{
+    margin-top: 30px;
+    margin-left: 15px
+}
+.ProductImg {
+    margin-top: 5px;
+    width: 300px;
+    height: 400px;
+}
+.ProductName {
+    color: #ff007f;
+}
+.Product {
+    border: solid #e7c0d4 2px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.ProductList a:hover {
+    cursor: pointer;
+}
+.inputQuantity {
+    width: 50%;
+}
+.Price {
+    font-size: 35px;
+}

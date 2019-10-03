@@ -1,0 +1,46 @@
+.body {
+    margin-top: 50px;
+  }
+.slide div img {
+    width: 100%;
+    height: 30%;
+}
+@media screen and (max-width: 1080px) {
+    #myCarousel {
+      margin-top: 50px;
+    }
+}
+.ProductImg {
+    width: 50%;
+    height: 70%;
+}
+.Product {
+    float: left;
+    border-style: ridge;
+}
+.cart {
+    margin-top: 100px;
+    color: #ff007f;
+}
+.ProductPage {
+    margin-top: 80px;
+}
+.CatalogName {
+    color: #ff007f;
+}
+.cartList li{
+    list-style-type: none
+}
+.imgCartItem {
+    width: 40%;
+    height: 40%;
+}
+.deleteItem:hover {
+    cursor: pointer;
+    color: #ff007f
+}
+.tongTien {
+    float: right;
+    margin-right: 200px;
+    text-align: center;
+}
