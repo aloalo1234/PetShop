@@ -3,7 +3,6 @@ import Menu from './Menu';
 import brand from './../../Image/brand-final.png';
 import './../../Style/Header.css'
 import SearchForm from './SearchForm';
-import LoginForm from './LoginForm'
 import Login from './Login';
 import {Link} from 'react-router-dom'
 import ShoppingCart from './ShoppingCart';
@@ -25,7 +24,6 @@ export default class ComponentHeader extends React.Component{
                         <ShoppingCart/>
                     </ul> 
                 </nav>
-                <LoginForm />
             </div>
         )
     }

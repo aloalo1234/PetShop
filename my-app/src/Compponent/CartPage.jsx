@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import cartStorage from './../storage/cartStorage'
 import { connect } from 'react-redux'
 import Quantity from './Body/Quantity'
+import ComponentHeader from './Header/ComponentHeader'
 class CartPage extends Component {
     constructor(props) {
         super(props)
@@ -13,10 +14,13 @@ class CartPage extends Component {
 
     render() {
         return (
-            <div className="container-fluid cart">
-                {this._renderItem()}
-                {this._tinhTong()}
-            </div >
+            <React.Fragment>
+                <ComponentHeader />
+                <div className="container-fluid cart">
+                    {this._renderItem()}
+                    {this._tinhTong()}
+                </div >
+            </React.Fragment>
         )
     }
     _renderItem = () => {
@@ -60,11 +64,11 @@ class CartPage extends Component {
         )
 
     }
-_changeQuantity = (id, quantity) => {
-    cartStorage._changeQuantity(id, quantity)
-    this.props.setBadge(cartStorage._getLength())
-    this.setState({ carts: cartStorage._get() })
-}
+    _changeQuantity = (id, quantity) => {
+        cartStorage._changeQuantity(id, quantity)
+        this.props.setBadge(cartStorage._getLength())
+        this.setState({ carts: cartStorage._get() })
+    }
 }
 const mapDistpatchToProps = dispatch => ({
     setBadge: (quantity) => {

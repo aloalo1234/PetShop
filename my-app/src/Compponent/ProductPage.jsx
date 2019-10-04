@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { AppService } from './../Services/app.service.js'
 import ProductList from "./Body/ProductList";
 import { connect } from 'react-redux'
+import ComponentHeader from './Header/ComponentHeader.jsx';
 
 class ProductPage extends Component {
     constructor(props) {
@@ -23,10 +24,13 @@ class ProductPage extends Component {
     }
     render() {
         return (
-            <div className="ProductPage">
-                <h1 className="CatalogName">{this.props.catalogName}</h1>
-                <ProductList product={this.props.product}/>
-            </div>
+            <React.Fragment>
+                <ComponentHeader />
+                <div className="ProductPage">
+                    <h1 className="CatalogName">{this.props.catalogName}</h1>
+                    <ProductList product={this.props.product} />
+                </div>
+            </React.Fragment>
         )
     }
     componentDidMount = () => {
@@ -52,7 +56,7 @@ const mapDispatchToProps = dispatch => ({
     },
     setCatalogName: (name) => {
         // alert(name)
-        dispatch({type:"SET_CATALOG", payload: name })
+        dispatch({ type: "SET_CATALOG", payload: name })
     },
     fetching: () => {
         dispatch({ type: "FETCHING" })

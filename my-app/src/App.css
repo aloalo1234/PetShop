@@ -44,3 +44,14 @@
     margin-right: 200px;
     text-align: center;
 }
+/* ManagePage */
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+.list li{
+    list-style-type: none;
+}
+.list {
+    margin-top: 20px;
+}

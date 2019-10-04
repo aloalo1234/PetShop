@@ -2,17 +2,18 @@ import cartStorage from './../storage/cartStorage'
 const initState = {
     product: [],
     isLoading: true,
-    menuItem : {
-        "Cho": [{key: "PKC",value:"Phụ kiện cho chó"}, {key: "NCC", value:"Nhà cho chó"},{ key:"TAC", value:"Thức ăn cho chó"}],
-        "Meo": [{key: "PKM", value: "Phụ kiện cho mèo"},{key:"NCM", value: "Nhà cho mèo"},{key:"TAM", value:"Thức ăn cho mèo"}]
+    menuItem: {
+        "Cho": [{ key: "PKC", value: "Phụ kiện cho chó" }, { key: "NCC", value: "Nhà cho chó" }, { key: "TAC", value: "Thức ăn cho chó" }],
+        "Meo": [{ key: "PKM", value: "Phụ kiện cho mèo" }, { key: "NCM", value: "Nhà cho mèo" }, { key: "TAM", value: "Thức ăn cho mèo" }]
     },
-    menuName : {
+    menuName: {
         "Cho": "Mua đồ cho Chó",
         "Meo": "Mua đồ cho Mèo"
     },
+    productManagement: [],
     keyword: "",
     catalogName: "",
-    selectedItem: {id:"", avatar:"", name:"", price:""},
+    selectedItem: { id: "", avatar: "", name: "", price: "" },
     badge: cartStorage._getLength(),
 }
 
@@ -26,7 +27,7 @@ export function pageReducer(state = initState, action) {
         case "FETCH_PRODUCT":
             return {
                 ...state,
-                product:  [...state.product, ...action.payload],
+                product: [...state.product, ...action.payload],
                 isLoading: false,
             }
         case "SET_CATALOG":
@@ -45,10 +46,21 @@ export function pageReducer(state = initState, action) {
                 ...state,
                 badge: action.payload
             }
-        case "CHANGE_KEYWORD": 
+        case "CHANGE_KEYWORD":
             return {
                 ...state,
                 keyword: action.payload
+            }
+        case "MANAGEMENT":
+            return {
+                ...state,
+                productManagement: [...state.productManagement, ...action.payload],
+            }
+        case "DELETE": 
+            const arr = state.productManagement.filter(val => val.ProductID !== action.payload.ProductID)
+            return {
+                ...state,
+                productManagement: arr
             }
     }
     return state

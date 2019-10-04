@@ -3,15 +3,18 @@ import Slide from './Body/Slide'
 import ProductList from './Body/ProductList'
 import { AppService } from './../Services/app.service'
 import { connect } from 'react-redux'
+import LoginForm from './Header/LoginForm'
+import ComponentHeader from './Header/ComponentHeader'
 class Home extends Component {
     render() {
         // console.log(this.props.product)
         return (
             <div>
+                <ComponentHeader/>
                 <div className="container-fluid body">
                     <Slide />
                     <ProductList product={this.props.product} />
-                    {/* <ProductList product={this.props.product} /> */}
+                    <LoginForm history={this.props.history}/>
                 </div>
             </div>
         )
@@ -35,7 +38,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
     fetchData: (id) => {
         AppService._get(id).then(data => {
-            // console.log(data)
             dispatch({ type: "FETCH_DATA", payload: data })
         })
     }

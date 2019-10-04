@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import cartStorage from './../../storage/cartStorage.js'
 import { Link } from 'react-router-dom'
 class ShoppingCart extends Component {
     
