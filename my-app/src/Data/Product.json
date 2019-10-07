@@ -1,0 +1,128 @@
+[
+    {
+      "ProductID": "1",
+      "CategoryID": "PKC",
+      "ProductName": "Vòng cổ cho chó",
+      "Price": "273.00",
+      "Avatar": "http://dodopetshop.com/media/catalog/product/cache/8/image/b0c031e1912e137b5f667eed70d1f93b/v/o/vong-co-in-hoa-chuong-cho-cho-meo.jpg"
+    },
+    {
+      "ProductID": "2",
+      "CategoryID": "PKC",
+      "ProductName": "Vòng cổ lúc lắc",
+      "Price": "614.00",
+      "Avatar": "https://bizweb.dktcdn.net/100/229/172/products/vong-co-1cm-min.png?v=1550506530000"
+    },
+    {
+      "ProductID": "3",
+      "CategoryID": "PKC",
+      "ProductName": "Rọ mõm mỏ vịt",
+      "Price": "316.00",
+      "Avatar": "http://bizweb.dktcdn.net/100/047/359/products/120910dog8-41bdd.jpg?v=1469009528033"
+    },
+    {
+      "ProductID": "4",
+      "CategoryID": "TAC",
+      "ProductName": "Thức ăn khô Pedigree",
+      "Price": "868.00",
+      "Avatar": "http://dodopetshop.com/media/catalog/product/cache/8/image/b0c031e1912e137b5f667eed70d1f93b/p/e/pedigree-dry-dog-food.jpg"
+    },
+    {
+      "ProductID": "5",
+      "CategoryID": "TAC",
+      "ProductName": "Thức ăn chó Puppy Royal Canin ",
+      "Price": "174.00",
+      "Avatar": "https://bizweb.dktcdn.net/100/229/172/products/mini-puppy-min.jpg?v=1544157048000"
+    },
+    {
+      "ProductID": "6",
+      "CategoryID": "TAC",
+      "ProductName": "Thức ăn cho chó size nhỏ",
+      "Price": "424.00",
+      "Avatar": "https://salt.tikicdn.com/cache/550x550/ts/product/da/3e/51/7a2da04bce3fd5adc9c21ec1b6cba7b5.png"
+    },
+    {
+      "ProductID": "7",
+      "CategoryID": "NCC",
+      "ProductName": "Nhà cá mập cho chó size nhỏ",
+      "Price": "644.00",
+      "Avatar": "https://cf.shopee.vn/file/3c4bafe083dfcba6f8bc0fa845394ce7"
+    },
+    {
+      "ProductID": "8",
+      "CategoryID": "NCC",
+      "ProductName": "Nhà gỗ cho chó size lớn",
+      "Price": "71.00",
+      "Avatar": "https://www.thukieng.com/wp-content/uploads/2018/10/huong-dan-tu-lam-chuong-cho-bang-go-3.jpg"
+    },
+    {
+      "ProductID": "9",
+      "CategoryID": "NCC",
+      "ProductName": "Nhà gỗ có cầu thang cho chó",
+      "Price": "71.00",
+      "Avatar": "https://dogily.vn/wp-content/uploads/2018/11/M%E1%BA%ABu_chu%E1%BB%93ng_g%E1%BB%97_%C4%91%E1%BA%B9p_cho_ch%C3%B3_-_Dogily_Petshop_7.jpg"
+    },
+    {
+      "ProductID": "10",
+      "CategoryID": "NCM",
+      "ProductName": "Nhà tai gấu cho mèo",
+      "Price": "754.00",
+      "Avatar": "https://www.vietpet.vn/wp-content/uploads/2018/03/282344.png"
+    },
+    {
+      "ProductID": "11",
+      "CategoryID": "NCM",
+      "ProductName": "Nhà gỗ cho mèo",
+      "Price": "754.00",
+      "Avatar": "http://nhachomeo.com/wp-content/uploads/2019/04/bia.jpg"
+    },
+    {
+      "ProductID": "12",
+      "CategoryID": "NCM",
+      "ProductName": "Đệm bông lốp xe cho mèo",
+      "Price": "154.00",
+      "Avatar": "https://chuongchodep.com/wp-content/uploads/2019/02/Dem-lop-xe-cao-su-cho-meo.jpg"
+    },
+    {
+      "ProductID": "13",
+      "CategoryID": "PKM",
+      "ProductName": "Mũ len cho mèo",
+      "Price": "14.00",
+      "Avatar": "https://image2.tin247.com/pictures/2014/06/03/pxa1401783027.jpg"
+    },
+    {
+      "ProductID": "14",
+      "CategoryID": "PKM",
+      "ProductName": "Bộ cosplay cho mèo",
+      "Price": "170.00",
+      "Avatar": "https://blogcachnuoi.com/wp-content/uploads/2017/11/quan-ao-cho-meo-1.jpg"
+    },
+    {
+      "ProductID": "15",
+      "CategoryID": "PKM",
+      "ProductName": "Lăc cổ cho mèo",
+      "Price": "15.00",
+      "Avatar": "https://i.ebayimg.com/images/g/ofIAAOSwUMxaTIEF/s-l300.jpg"
+    },
+    {
+      "ProductID": "16",
+      "CategoryID": "TAM",
+      "ProductName": "Thức ăn cho mèo con Whikas",
+      "Price": "180.00",
+      "Avatar": "https://salt.tikicdn.com/cache/550x550/ts/product/ca/4f/cb/84a776dca14a55807fcf5f6dea33a45d.jpg"
+    },
+    {
+      "ProductID": "17",
+      "CategoryID": "TAM",
+      "ProductName": "Thức ăn cho mèo lớn Whikas",
+      "Price": "190.00",
+      "Avatar": "https://salt.tikicdn.com/cache/550x550/ts/product/b2/52/4f/9067fa4a9275167ee1d1ff59f08f0d50.jpg"
+    },
+    {
+      "ProductID": "12",
+      "CategoryID": "TAM",
+      "ProductName": "Thức ăn cho mèo Royal Canin",
+      "Price": "184.00",
+      "Avatar": "http://dodopetshop.com/media/catalog/product/cache/8/image/b0c031e1912e137b5f667eed70d1f93b/k/i/kitten.jpg"
+    }
+  ]

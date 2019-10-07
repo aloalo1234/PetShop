@@ -50,16 +50,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
     fetchProduct: (key) => {
         AppService._get(key).then(data => {
-            // console.log(data)
             dispatch({ type: "FETCH_PRODUCT", payload: data })
         })
     },
     setCatalogName: (name) => {
-        // alert(name)
         dispatch({ type: "SET_CATALOG", payload: name })
     },
-    fetching: () => {
-        dispatch({ type: "FETCHING" })
-    }
 })
 export default connect(mapStateToProps, mapDispatchToProps)(ProductPage)

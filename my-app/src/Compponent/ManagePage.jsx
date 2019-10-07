@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { AppService } from './../Services/app.service'
+import AddProduct from './Button/AddProduct'
 class ManagePage extends Component {
     render() {
         return (
             <div className="managePage container">
                 <h1>MANAGEMENT</h1>
+                <AddProduct/>
                 {this._renderProduct()}
             </div>
         )
@@ -29,7 +31,7 @@ class ManagePage extends Component {
                         <li hidden>{val.CategoryID}</li>
                     </ul>
                     <div className="col-sm-2">
-                        <button className="btn btn-danger" onClick={()=>{
+                        <button className="btn btn-danger" onClick={() => {
                             console.log(val.CategoryID, val.ProductID)
                             this.props.deleteProduct(val.CategoryID, val.ProductID)
                         }}>Xóa</button>
@@ -54,8 +56,7 @@ const mapDispatchToProp = dispatch => ({
     },
     deleteProduct: (categoryID, id) => {
         AppService._delete(categoryID, id).then(data => {
-            console.log(data)
-            dispatch({type: "DELETE", payload: data})
+            dispatch({ type: "DELETE", payload: data })
         })
     }
 })

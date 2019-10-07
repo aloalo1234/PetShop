@@ -20,8 +20,8 @@ function _delete(categoryId,id) {
         .then(res => res.json())
         .then(data => data)
 };
-function _post(ojb) {
-    return fetch("http://5d78968ba8c27100149861fa.mockapi.io/data", {
+function _post(categoryId,ojb) {
+    return fetch(`http://5d57b22e91a96a0014758a0f.mockapi.io/api/Category/${categoryId}/Product/`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'

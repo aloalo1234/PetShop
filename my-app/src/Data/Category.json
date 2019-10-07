@@ -1,0 +1,26 @@
+[
+    {
+      "CategoryID": "PKC",
+      "CategoryName": "Phụ kiện cho chó"
+    },
+    {
+      "CategoryID": "PKM",
+      "CategoryName": "Phụ kiện cho mèo"
+    },
+    {
+      "CategoryID": "TAC",
+      "CategoryName": "Thức ăn cho chó"
+    },
+    {
+      "CategoryID": "TAM",
+      "CategoryName": "Thức ăn cho mèo"
+    },
+    {
+      "CategoryID": "NCC",
+      "CategoryName": "Nhà cho chó"
+    },
+    {
+      "CategoryID": "NCM",
+      "CategoryName": "Nhà cho mèo"
+    }
+  ]

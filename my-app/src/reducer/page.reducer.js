@@ -15,6 +15,7 @@ const initState = {
     catalogName: "",
     selectedItem: { id: "", avatar: "", name: "", price: "" },
     badge: cartStorage._getLength(),
+    searchResult: []
 }
 
 export function pageReducer(state = initState, action) {
@@ -27,7 +28,7 @@ export function pageReducer(state = initState, action) {
         case "FETCH_PRODUCT":
             return {
                 ...state,
-                product: [...state.product, ...action.payload],
+                product: action.payload,
                 isLoading: false,
             }
         case "SET_CATALOG":
@@ -49,7 +50,8 @@ export function pageReducer(state = initState, action) {
         case "CHANGE_KEYWORD":
             return {
                 ...state,
-                keyword: action.payload
+                keyword: action.payload,
+                searchResult: []
             }
         case "MANAGEMENT":
             return {
@@ -61,6 +63,11 @@ export function pageReducer(state = initState, action) {
             return {
                 ...state,
                 productManagement: arr
+            }
+        case "FETCH_SEARCH" :
+            return {
+                ...state, 
+                searchResult: [...state.searchResult,...action.payload]
             }
     }
     return state

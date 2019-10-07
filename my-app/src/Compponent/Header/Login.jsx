@@ -4,11 +4,11 @@ class Login extends Component {
     render() {
         return (
             <li>
-                <a>
+                <Link to="/login" >
                 <button data-toggle="modal" data-target="#myModal" className="btn navbar-btn icon-header">
                     <span className="glyphicon glyphicon-user"></span>
                 </button>
-                </a>
+                </Link>
             </li>
                
         );

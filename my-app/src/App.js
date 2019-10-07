@@ -9,7 +9,7 @@ import ProductModal from './Compponent/Body/ProductModal';
 import CartPage from './Compponent/CartPage'
 import SearchPage from './Compponent/SearchPage.jsx'
 import ManagePage from "./Compponent/ManagePage.jsx"
-
+import LoginForm from "./Compponent/Header/LoginForm"
 function App() {
   return (
     <Provider store={store}>
@@ -20,8 +20,9 @@ function App() {
         <Route path="/cart" component={CartPage}/>
         <Route path="/search" component={SearchPage}/>
         <Route path="/manager" component={ManagePage}/>
-        <Redirect exact from = "/" to = "/home"/>
+        {/* <Redirect exact from = "/" to = "/home"/> */}
         <ProductModal/>
+        <Route path="/login" component={LoginForm}/>
       </Router>
     </Provider>
   );
