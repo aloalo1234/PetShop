@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom'
+import brand from "./../../Image/brand-final.png"
 import userStorage from '../../storage/userStorage';
 class LoginForm extends Component {
     state = {
@@ -20,7 +21,7 @@ class LoginForm extends Component {
             <div className="modal-dialog modal-sm">
             <div className="modal-content">
                 <div className="modal-header">
-                    <h3 className="modal-title loginTitle">MANAGEMENT</h3>
+                <Link to="/home" className="navbar-brand"><img src={brand}></img></Link>
                 </div>
                 <div className="modal-body">
                     <div>

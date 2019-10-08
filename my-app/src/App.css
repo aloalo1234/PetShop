@@ -56,10 +56,19 @@
     margin-top: 20px;
 }
 /* AddForm */
+.addForm {
+    margin-bottom: 10px;
+}
 .addForm div {
     margin-bottom: 5px;
 }
 .thumbnail {
     width: 100px;
     height: 100px;
+}
+.btnAdd {
+    margin-bottom: 10px;
+}
+.btnAddForm {
+    margin-left: 20px;
 }

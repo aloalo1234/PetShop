@@ -1,51 +1,65 @@
 import React, { Component } from 'react'
+import brand from './../Image/brand-final.png';
 import { connect } from "react-redux"
+import { Link } from 'react-router-dom'
 import { AppService } from './../Services/app.service'
 import AddProduct from './Button/AddProduct'
+import EditProduct from './Body/EditProduct'
+import ManageItem from './Body/ManageItem'
 class ManagePage extends Component {
+    state = {
+        idEdit: -1
+    }
     render() {
         return (
             <div className="managePage container">
-                <h1>MANAGEMENT</h1>
-                <AddProduct/>
+                <Link to="/home" className="navbar-brand"><img src={brand}></img></Link>
+                <AddProduct onSubmit={this._fetch} />
                 {this._renderProduct()}
             </div>
         )
     }
-    componentDidMount = () => {
+    _fetch = () => {
         const { id } = this.props;
         id.forEach(val => {
             this.props.fetchProduct(val.name);
         });
     }
+    componentDidMount = () => {
+        this._fetch()
+    }
+    _handleEdit = (id) => {
+        this.setState({ idEdit: id })
+    }
+    _renderCategory = (categoryID) => {
+        const { category } = this.props
+        let tmp = category.find(val => val.key === categoryID)
+        return tmp.name
+    }
+    _editData = (categoryID,id, obj) => {
+        AppService._put(categoryID,id, obj).then(() => {
+            this._fetch()
+            this.setState({ idEdit: -1 })
+        })
+    }
     _renderProduct = () => {
         const { productManagement } = this.props
-        console.log(productManagement)
+        const { idEdit } = this.state
         return productManagement.map(val => {
-            return (
-                <div className="list row">
-                    <div className="col-sm-4"><img className="avatar" src={val.Avatar}></img></div>
-                    <ul className="col-sm-6">
-                        <li><h3>{val.ProductName}</h3></li>
-                        <li>{val.Price}$</li>
-                        <li hidden>{val.CategoryID}</li>
-                    </ul>
-                    <div className="col-sm-2">
-                        <button className="btn btn-danger" onClick={() => {
-                            console.log(val.CategoryID, val.ProductID)
-                            this.props.deleteProduct(val.CategoryID, val.ProductID)
-                        }}>Xóa</button>
-                        <button className="btn btn-success">Sửa</button>
-                    </div>
-                </div>
-            )
+            return (val.ProductID === idEdit)
+                ? <EditProduct productValue={val} onSave={(categoryID,id, obj)=>{this._editData(categoryID,id, obj)}} onCancel={() => this.setState({ idEdit: -1 })} />
+                : <ManageItem productValue={val} renderCategory={this._renderCategory}
+                    onEdit={this._handleEdit} onDelete={this.props.deleteProduct} />
         })
     }
 }
+// 
+// onClick={this._handleEdit(val.ProductID)}
 const mapStateToProps = state => {
     return {
         productManagement: state.page.productManagement,
-        id: state.home.id
+        id: state.home.id,
+        category: state.home.category
     }
 }
 const mapDispatchToProp = dispatch => ({

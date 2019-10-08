@@ -31,8 +31,8 @@ function _post(categoryId,ojb) {
         .then(res => res.json())
         .then(data => data)
 };
-function _edit(id, obj) {
-    return fetch(`http://5d78968ba8c27100149861fa.mockapi.io/data/${id}`, {
+function _put(categoryId,id, obj) {
+    return fetch(`http://5d57b22e91a96a0014758a0f.mockapi.io/api/Category/${categoryId}/Product/${id}`, {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'
@@ -45,5 +45,7 @@ function _edit(id, obj) {
 export const AppService = {
     _get,
     _search,
-    _delete
+    _delete,
+    _post,
+    _put
 }
